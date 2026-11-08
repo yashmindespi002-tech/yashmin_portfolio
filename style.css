@@ -1,0 +1,275 @@
+
+/* GENERAL DESIGN */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1c0d4;
+    color: #493640;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    background-color: rgb(252, 177, 216);
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f285b6;
+}
+
+.logo {
+    font-size: 26px;
+    color: #493640;
+}
+
+.logo span {
+    color: #d95f91;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #786873;
+    padding: 8px 13px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #fff0f6;
+    color: #b94376;
+}
+
+/* HOME SECTION */
+
+.home {
+    min-height: 580px;
+    padding: 70px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.home-content {
+    max-width: 550px;
+}
+
+.small-title {
+    color: #b94376;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.home h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.home h1 span,
+.page-section h1 span {
+    color: #d95f91;
+}
+
+.home h2 {
+    font-size: 20px;
+    color: #786873;
+    margin-bottom: 15px;
+}
+
+.home-content p {
+    color: #786873;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    background-color: #d95f91;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #b94376;
+}
+
+/* PROFILE IMAGE */
+
+.home-image {
+    background-color: #ffe6f0;
+    padding: 12px;
+    border-radius: 25px;
+}
+
+.home-image img {
+    width: 280px;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    border-radius: 18px;
+}
+
+/* OTHER PAGE SECTIONS */
+
+.page-section {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 0;
+}
+
+.page-section h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.intro {
+    color: #786873;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+/* CONTENT CARDS */
+
+.content-card {
+    background-color: white;
+    padding: 28px;
+    border: 1px solid #f2dce6;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(100, 50, 70, 0.05);
+    margin-top: 15px;
+}
+
+.content-card h2 {
+    color: #493640;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.content-card p {
+    color: #786873;
+    margin-bottom: 12px;
+}
+
+/* CARD HOVER */
+
+.content-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(100, 50, 70, 0.10);
+}
+
+/* SKILLS AND PROJECTS GRID */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-label {
+    color: #b94376 !important;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.project-meta {
+    border-top: 1px solid #f2dce6;
+    padding-top: 12px;
+    font-size: 13px;
+}
+
+/* ABOUT PAGE */
+
+.info-list {
+    border-top: 1px solid #f199c1;
+    margin-top: 20px;
+    padding-top: 15px;
+}
+
+/* CONTACT PAGE */
+
+.contact-card {
+    max-width: 650px;
+}
+
+.contact-card h2 {
+    color: #b94376;
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(245, 166, 219);
+    border-top: 1px solid #f2dce6;
+    text-align: center;
+    padding: 20px;
+    color: #786873;
+    font-size: 13px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 45px 7%;
+    }
+
+    .home h1 {
+        font-size: 36px;
+    }
+
+    .home-image img {
+        width: 230px;
+        height: 280px;
+    }
+
+    .page-section {
+        width: 90%;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .page-section h1 {
+        font-size: 34px;
+    }
+}
